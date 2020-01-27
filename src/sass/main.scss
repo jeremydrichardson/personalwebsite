@@ -1,0 +1,76 @@
+// Fontawesome
+$fa-font-path:"../fonts";
+@import "../scss/fontawesome.scss";
+@import "../scss/solid.scss";
+@import "../scss/brands.scss";
+
+body, html {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 125%
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+mark {
+    padding: 0 0.2em;
+    background-color: rgba(255,188,0,0.5);
+    color: white;
+    white-space: nowrap;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/computer.jpg");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
+    height: 50%;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+    h2 {
+        line-height: 2em;
+    }
+}
+
+.container {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+}
+
+.card {
+    width: 30%;
+    background-color: #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+
+    h3 {
+        margin-top: 0;
+    }
+}
+
+.skills {
+    h3 {
+        border-bottom: 1px solid black;
+    }
+    ul {
+        display: flex;
+    }
+    li {
+        list-style-type: none;
+        padding: 15px;
+    }
+}
