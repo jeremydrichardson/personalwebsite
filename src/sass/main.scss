@@ -4,30 +4,36 @@ $fa-font-path:"../fonts";
 @import "../scss/solid.scss";
 @import "../scss/brands.scss";
 
+$primary-font: 'Noto Sans', sans-serif;
+$secondary-font: 'Fjalla One', sans-serif;
+
+$primary-color: #9A562E;
+$secondary-color: #244440;
+
+
 body, html {
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 125%
+    font-family: $primary-font;
+    font-size: 110%;
+    background-color: lighten( $secondary-color, 70%)
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: $secondary-font;
 }
 
 mark {
     padding: 0 0.2em;
-    background-color: rgba(255,188,0,0.5);
+    background-color: $primary-color;
     color: white;
     white-space: nowrap;
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/computer.jpg");
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-size: cover;
     position: relative;
     height: 50%;
+    background-color: $secondary-color;
+    background: radial-gradient(circle, lighten( $secondary-color, 5% ) 30%, darken( $secondary-color, 10% ) 100%);
 }
 
 .hero-text {
@@ -52,13 +58,26 @@ mark {
 
 .card {
     width: 30%;
-    background-color: #eee;
+    background: #fff;
+    background: linear-gradient(176deg, rgba(255,255,255,1) 50%, lighten( $secondary-color, 75% ) 100%);
     border-radius: 8px;
     padding: 20px;
     margin: 15px;
+    flex-grow: 1;
+    margin-top: -50px;
+    z-index: 100;
 
     h3 {
         margin-top: 0;
+        color: $secondary-color;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid #eee;
+        width: 40%;
+        text-align: left;
+        margin-left: 0;
     }
 }
 
