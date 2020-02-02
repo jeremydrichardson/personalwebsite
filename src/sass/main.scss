@@ -1,8 +1,8 @@
 // Fontawesome
-$fa-font-path:"../fonts";
-@import "../scss/fontawesome.scss";
-@import "../scss/solid.scss";
-@import "../scss/brands.scss";
+//$fa-font-path:"../fonts";
+//@import "../scss/fontawesome.scss";
+//@import "../scss/solid.scss";
+//@import "../scss/brands.scss";
 
 $primary-font: 'Noto Sans', sans-serif;
 $secondary-font: 'Fjalla One', sans-serif;
@@ -53,19 +53,44 @@ mark {
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
+    padding: 0 1em;
+}
+
+@media screen and (min-width: 40em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: -2%;
+    }
+ 
+    .card {
+        flex: 0 1 calc(50% - 1em);
+        z-index: 100;
+        
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+
+.cards {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 1em;
 }
 
 .card {
-    width: 30%;
     background: #fff;
     background: linear-gradient(176deg, rgba(255,255,255,1) 50%, lighten( $secondary-color, 75% ) 100%);
     border-radius: 8px;
+    box-sizing: border-box;
     padding: 20px;
-    margin: 15px;
-    flex-grow: 1;
-    margin-top: -50px;
-    z-index: 100;
+    margin-bottom: 1em;
 
     h3 {
         margin-top: 0;
@@ -87,9 +112,11 @@ mark {
     }
     ul {
         display: flex;
+        flex-wrap: wrap;
     }
     li {
         list-style-type: none;
         padding: 15px;
     }
 }
+
